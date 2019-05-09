@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BaseXGPush_Example' do
+  pod 'BaseXGPush', :path => '../'
+
+  target 'BaseXGPush_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
