@@ -8,10 +8,17 @@
 
 import UIKit
 
+import XGPush_Swift
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        let notifi = XGNotificationAction.init()
+        print(notifi)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

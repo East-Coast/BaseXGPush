@@ -1,0 +1,6 @@
+framework module BaseXGPush {
+  umbrella header "BaseXGPush-umbrella.h"
+
+  export *
+  module * { export * }
+}

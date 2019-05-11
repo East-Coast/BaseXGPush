@@ -42,11 +42,13 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		77377B9AC1DC50DC9854BF5B /* Pods-BaseXGPush_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseXGPush_Example.release.xcconfig"; path = "Target Support Files/Pods-BaseXGPush_Example/Pods-BaseXGPush_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7A17DC602285ADC0004EC445 /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libXG-SDK.a"; path = "Pods/XGPush_Swift/XGPush/libXG-SDK.a"; sourceTree = "<group>"; };
+		7ADB6BFF228596A400C89003 /* XGPush_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XGPush_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98184FCC946215DE14C7F843 /* Pods_BaseXGPush_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseXGPush_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBBEDC43112111A856C9671 /* Pods-BaseXGPush_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseXGPush_Tests.release.xcconfig"; path = "Target Support Files/Pods-BaseXGPush_Tests/Pods-BaseXGPush_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E737692DFFCE16134E1D2AE2 /* BaseXGPush.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BaseXGPush.podspec; path = ../BaseXGPush.podspec; sourceTree = "<group>"; };
-		F0D05841F18FB05CDB77072D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F230C517C5BF023E42059F56 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E737692DFFCE16134E1D2AE2 /* BaseXGPush.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BaseXGPush.podspec; path = ../BaseXGPush.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F0D05841F18FB05CDB77072D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F230C517C5BF023E42059F56 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,6 @@
 				5C097117B8647187A21BC605 /* Pods-BaseXGPush_Tests.debug.xcconfig */,
 				9CBBEDC43112111A856C9671 /* Pods-BaseXGPush_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,6 +155,8 @@
 		701BAACB055800CA836E25F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7ADB6BFF228596A400C89003 /* XGPush_Swift.framework */,
+				7A17DC602285ADC0004EC445 /* libXG-SDK.a */,
 				98184FCC946215DE14C7F843 /* Pods_BaseXGPush_Example.framework */,
 				13B9F24BCFB1ECD8CF89624D /* Pods_BaseXGPush_Tests.framework */,
 			);
@@ -171,7 +174,6 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				CF981ADB769526059727E0BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6XJ23F2ZXN;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6XJ23F2ZXN;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +231,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -304,28 +309,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF981ADB769526059727E0BB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseXGPush_Example/Pods-BaseXGPush_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BaseXGPush/BaseXGPush.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BaseXGPush.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseXGPush_Example/Pods-BaseXGPush_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -482,8 +465,13 @@
 			baseConfigurationReference = 4549EE7C6207E5A06CE3C74A /* Pods-BaseXGPush_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6XJ23F2ZXN;
 				INFOPLIST_FILE = BaseXGPush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/XGPush_Swift/XGPush",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -497,8 +485,13 @@
 			baseConfigurationReference = 77377B9AC1DC50DC9854BF5B /* Pods-BaseXGPush_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6XJ23F2ZXN;
 				INFOPLIST_FILE = BaseXGPush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/XGPush_Swift/XGPush",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C097117B8647187A21BC605 /* Pods-BaseXGPush_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6XJ23F2ZXN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -533,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CBBEDC43112111A856C9671 /* Pods-BaseXGPush_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6XJ23F2ZXN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

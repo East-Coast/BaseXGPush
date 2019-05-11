@@ -1,0 +1,28 @@
+{
+  "name": "BaseXGPush",
+  "version": "0.1.0",
+  "summary": "A short description of BaseXGPush.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/East-Coast/BaseXGPush",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "East-Coast": "zzh32123@ccclbus.com"
+  },
+  "source": {
+    "git": "https://github.com/East-Coast/BaseXGPush.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "static_framework": true,
+  "source_files": "BaseXGPush/Classes/**/*",
+  "dependencies": {
+    "XGPush_Swift": [
+      "~> 3.2.0"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+PODS:
+  - BaseXGPush (0.1.0):
+    - XGPush_Swift (~> 3.2.0)
+  - XGPush_Swift (3.2.4)
+
+DEPENDENCIES:
+  - BaseXGPush (from `../`)
+
+SPEC REPOS:
+  https://github.com/East-Coast/Specs.git:
+    - XGPush_Swift
+
+EXTERNAL SOURCES:
+  BaseXGPush:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BaseXGPush: 64e1f05557c2c068cf7af8ae6b11a956739005f2
+  XGPush_Swift: 7ffe470cfd04dc4f665a0c4eadd1feb195578ae5
+
+PODFILE CHECKSUM: e457404238db2b74856d4c6b8eb7721138385f73
+
+COCOAPODS: 1.6.1
